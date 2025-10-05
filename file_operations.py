@@ -17,3 +17,18 @@ for x in file:
     print(x)
 
 file.close()
+file = open('update.txt', 'r')
+print(file.read())
+file1 = open('update.txt', 'w')
+x = file.readlines()
+print(type(x))
+for i in x:
+    if i%2 != 0:
+        file1.write(x[i-1])
+    else:
+        pass
+file.close()
+file1.close()
+file1 = open('update.txt', 'r')
+print(file1.read())
+file1.close()
